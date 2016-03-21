@@ -17,7 +17,7 @@ The classes from `_objects.layout.scss` are augmented by the classes generated
 by `_tools.widths.scss`’ mixin in order to create grid structures that are sized
 accordingly, e.g.:
 
-```
+```HTML
 <div class="o-layout">
   <div class="o-layout__item  u-width-1/2">
     ...
@@ -32,19 +32,19 @@ To generate your width classes (e.g. `.u-width-1/2`) you need to call the
 like to create. To create a 12 column grid system, simply call the mixin like
 so:
 
-```
+```SCSS
 @include widths(12);
 ```
 
 To generate a 12 and a 16 column grid system, call the mixin like so:
 
-```
+```SCSS
 @include widths(12 16);
 ```
 
 To generate a 3, a 4, and an 8 column grid system, call the mixin like so:
 
-```
+```SCSS
 @include widths(3 4 8);
 ```
 
@@ -70,7 +70,7 @@ additions:
 
 To generate a 12 column grid system for use on screens over 1200px wide:
 
-```
+```SCSS
 @media screen and (min-width: 1200px) {
   @include widths(12, \@large);
 }
@@ -79,7 +79,7 @@ To generate a 12 column grid system for use on screens over 1200px wide:
 This will create a suite of classes—that only exist in scenarios over 1200px
 wide—that look like this:
 
-```
+```CSS
 @media screen and (min-width: 1200px) {
 
   .u-width-1/12@large {
