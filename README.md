@@ -23,8 +23,8 @@ Layout is split into two core files:
   lay out our UI.
 
 The classes from `_objects.layout.scss` are augmented by the classes generated
-by `_tools.widths.scss`’ mixin in order to create grid structures that are sized
-accordingly, e.g.:
+by `_tools.widths.scss`’ mixin in order to create layout structures that are
+sized accordingly, e.g.:
 
 ```HTML
 <div class="o-layout">
@@ -76,20 +76,20 @@ There are only two parts of Layout that might need configuring:
 
 To generate your width classes (e.g. `.u-width-1/2`) you need to call the
 `widths()` mixin in your project, passing in the number of columns you would
-like to create. To create a 12 column grid system, simply call the mixin like
+like to create. To create a 12 column layout system, simply call the mixin like
 so:
 
 ```SCSS
 @include widths(12);
 ```
 
-To generate a 12 and a 16 column grid system, call the mixin like so:
+To generate a 12 and a 16 column layout system, call the mixin like so:
 
 ```SCSS
 @include widths(12 16);
 ```
 
-To generate a 3, a 4, and an 8 column grid system, call the mixin like so:
+To generate a 3, a 4, and an 8 column layout system, call the mixin like so:
 
 ```SCSS
 @include widths(3 4 8);
@@ -115,7 +115,7 @@ additions:
    Suffix](http://csswizardry.com/2015/08/bemit-taking-the-bem-naming-convention-a-step-further/#responsive-suffixes)
    parameter which denotes the point at which that class takes effect.
 
-To generate a 12 column grid system for use on screens over 1200px wide:
+To generate a 12 column layout system for use on screens over 1200px wide:
 
 ```SCSS
 @media screen and (min-width: 1200px) {
@@ -155,7 +155,7 @@ wide—that look like this:
 ## Options
 
 There are a _lot_ of different options (and combinations of options) for
-different styles of grid. Below is a rough summary, but please refer to the
+different styles of layout. Below is a rough summary, but please refer to the
 comments in the Sass for a more complete description of what each option
 provides.
 
