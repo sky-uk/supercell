@@ -245,6 +245,7 @@ $global-spacing-unit-large: round($global-spacing-unit * 2) !default;
 
   > .o-layout__item {
     direction: ltr;
+    text-align: left;
   }
 
 }
