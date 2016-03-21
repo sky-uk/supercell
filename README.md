@@ -27,8 +27,8 @@ accordingly, e.g.:
 
 ## Implementation
 
-To generate your responsive width classes (e.g. `.u-width-1/2`) you need to call
-the `widths()` mixin in your project, passing in the number of columns you would
+To generate your width classes (e.g. `.u-width-1/2`) you need to call the
+`widths()` mixin in your project, passing in the number of columns you would
 like to create. To create a 12 column grid system, simply call the mixin like
 so:
 
@@ -47,6 +47,9 @@ To generate a 3, a 4, and an 8 column grid system, call the mixin like so:
 ```
 @include widths(3 4 8);
 ```
+
+Layout will now generate a full suite of classes that will satisfy every
+possible width that falls into those boundaries.
 
 ### Responsive
 
@@ -100,4 +103,30 @@ wide—that look like this:
     
 
 }
+```
+
+## Example
+
+```
+<ul class="o-layout  o-layout--reverse">
+
+  <li class="o-layout__item  u-width-1/1  u-width-1/4@medium  u-width-1/2@large">
+    100% by default, then 25% width on medium screens, before finally being 50%
+    width on large screens and beyond.
+  </li>
+
+  <li class="o-layout__item  u-width-1/2  u-width-1/4@medium">
+    50% width by default, then 25% width on medium screens and beyond.
+  </li>
+
+  <li class="o-layout__item  u-width-1/2  u-width-1/4@medium">
+    50% width by default, then 25% width on medium screens and beyond.
+  </li>
+
+  <li class="o-layout__item  u-width-1/1  u-width-1/4@medium  u-width-1/1@large">
+    100% by default, then 25% width on medium screens, before finally being 100%
+    width again on large screens and beyond.
+  </li>
+
+</ul>
 ```
