@@ -27,8 +27,8 @@ accordingly, e.g.:
 
 ## Configuration
 
-**N.B.** If you are using Layout as part of Toolkit, you will not need to
-configure anything. Please ignore this section.
+**N.B. If you are using Layout as part of Toolkit, you will not need to
+configure anything. Please ignore this section.**
 
 There are only two parts of Layout that might need configuring:
 
