@@ -2,4 +2,23 @@
 
 @import "objects.layout";
 
-@import "utilities.widths";
+// Build the grids
+// Create all of our classes for any/all breakpoints (e.g. `.u-width-1/2`).
+
+// Build one twelve-column grid system:
+@include widths(12);
+
+// Build a twelve-column grid system for use at small-and-up sizes:
+@media screen and (min-width: 30em) {
+  @include widths(12, \@small);
+}
+
+// Build a twelve-column grid system for use at medium-and-up sizes:
+@media screen and (min-width: 45em) {
+  @include widths(12, \@medium);
+}
+
+// Build a twelve-column grid system for use at medium-and-up sizes:
+@media screen and (min-width: 64em) {
+  @include widths(12, \@large);
+}
