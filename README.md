@@ -113,23 +113,27 @@ wide—that look like this:
   <li class="o-layout__item
              u-width-1/1  u-width-1/4@medium  u-width-1/2@large">
     100% by default, then 25% width on medium screens, before finally being 50%
-    width on large screens and beyond.
+    width on large screens and beyond. Displays last on-screen despite being
+    defined first in the markup.
   </li>
 
   <li class="o-layout__item
              u-width-1/2  u-width-1/4@medium">
-    50% width by default, then 25% width on medium screens and beyond.
+    50% width by default, then 25% width on medium screens and beyond. Displays
+    third on-screen despite being defined second in the markup.
   </li>
 
   <li class="o-layout__item
              u-width-1/2  u-width-1/4@medium">
-    50% width by default, then 25% width on medium screens and beyond.
+    50% width by default, then 25% width on medium screens and beyond. Displays
+    second on-screen despite being defined third in the markup.
   </li>
 
   <li class="o-layout__item
              u-width-1/1  u-width-1/4@medium  u-width-1/1@large">
     100% by default, then 25% width on medium screens, before finally being 100%
-    width again on large screens and beyond.
+    width again on large screens and beyond. Displays first on-screen despite
+    being defined last in the markup.
   </li>
 
 </ul>
