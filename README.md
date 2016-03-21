@@ -34,6 +34,11 @@ sized accordingly, e.g.:
 </div>
 ```
 
+The reason that the layout and the widths are kept in different
+files/suites-of-classes is simple: it allows us to use our width classes (e.g.
+`.u-1/2@small`) on non-layout related bits of UI, for example, making an `img`
+half of the width of its container in a blog post.
+
 ## Configuration
 
 **N.B. If you are using Layout as part of Toolkit, you will not need to
