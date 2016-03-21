@@ -107,7 +107,7 @@ wide—that look like this:
 
 ## Example
 
-```
+```HTML
 <ul class="o-layout  o-layout--reverse">
 
   <li class="o-layout__item
