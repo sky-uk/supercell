@@ -143,6 +143,25 @@ wide—that look like this:
 }
 ```
 
+## Options
+
+There are a _lot_ of different options (and combinations of options) for
+different styles of grid. Below is a rough summary, but please refer to the
+comments in the Sass for a more complete description of what each option
+provides.
+
+* **`.o-layout--[narrow|wide|flush]`**: Narrow, wide, or no gutters between
+  items.
+* **`.o-layout--[middle|bottom]`**: Align all items to the vertical middles or
+  bottoms of each other (top alignment is the default).
+* **`.o-layout--[center|right]`**: Begin filling up layout items from the
+  horizontal center or the right hand side of the layout context (filling from
+  the left is the default).
+* **`.o-layout--reverse`**: Completely reverse the displayed order of the layout
+  items.
+* **`.o-layout--spaced`**: Add vertical gutters to layout items (they do not
+  carry vertical spacing by default).
+
 ## Example
 
 ```HTML
