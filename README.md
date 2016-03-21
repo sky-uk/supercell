@@ -25,7 +25,25 @@ accordingly, e.g.:
 </div>
 ```
 
-## Implementation
+## Configuration
+
+**N.B.** If you are using Layout as part of Toolkit, you will not need to
+configure anything. Please ignore this section.
+
+There are only two parts of Layout that might need configuring:
+
+1. The size of the gutters between items.
+   To modify the size of the gutters in between layout items, simply predefine the
+   `$global-spacing-unit` variable _just before_ you `@import`
+   `objects.layout.scss`, like so:
+
+   ```SCSS
+   $global-spacing-unit: 20px;
+   @import "objects.layout";
+   ```
+2. The method used to manage rogue whitespace between `inline-block` elements.
+
+## Usage
 
 To generate your width classes (e.g. `.u-width-1/2`) you need to call the
 `widths()` mixin in your project, passing in the number of columns you would
