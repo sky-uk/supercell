@@ -32,16 +32,36 @@ configure anything. Please ignore this section.
 
 There are only two parts of Layout that might need configuring:
 
-1. The size of the gutters between items.
-   To modify the size of the gutters in between layout items, simply predefine the
-   `$global-spacing-unit` variable _just before_ you `@import`
+1. **The size of the gutters between items.**  
+   To modify the size of the gutters in between layout items, simply predefine
+   the `$global-spacing-unit` variable _just before_ you `@import`
    `objects.layout.scss`, like so:
 
    ```SCSS
    $global-spacing-unit: 20px;
    @import "objects.layout";
    ```
-2. The method used to manage rogue whitespace between `inline-block` elements.
+2. **The method used to manage rogue whitespace between `inline-block` elements.**  
+   Because Layout uses `inline-block` (which gives us a number of ways of
+   manipulating our layouts by using text-level CSS properties), we do have the
+   problem of needing to remove the whitespace that is left in between each
+   item.
+
+   There are [a number of ways of handling
+   this](https://jsfiddle.net/9dy6rwfz/), but they usually all require special
+   attention in the markup. These are the most reliable ways of removing the
+   whitespace, but are the least user-friendly.
+
+   By default, Layout uses the `font-size: 0;` hack to remove the whitespace,
+   without authors needing to do anything in their HTML to combat the problem.
+   This hack is very author-friendly, but isn’t 100% always guaranteed to work.
+   If you would like to disable the `font-size: 0;` hack and are prepared to
+   implement a markup-based fix, predefine the `$use-markup-fix` just before you
+   `@import` `objects.layout`, like so:
+   ```SCSS
+   $use-markup-fix: true;
+   @import "objects.layout";
+   ```
 
 ## Usage
 
