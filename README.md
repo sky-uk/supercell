@@ -36,7 +36,7 @@ so:
 @include widths(12);
 ```
 
-To generate a **12** and a 16 column grid system, call the mixin like so:
+To generate a 12 and a 16 column grid system, call the mixin like so:
 
 ```
 @include widths(12 16);
@@ -73,8 +73,8 @@ To generate a 12 column grid system for use on screens over 1200px wide:
 }
 ```
 
-This will create a suite of classes that only exist in scenarios over 1200px
-wide, that look like this:
+This will create a suite of classes—that only exist in scenarios over 1200px
+wide—that look like this:
 
 ```
 @media screen and (min-width: 1200px) {
