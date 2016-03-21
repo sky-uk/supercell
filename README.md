@@ -110,20 +110,24 @@ wide—that look like this:
 ```
 <ul class="o-layout  o-layout--reverse">
 
-  <li class="o-layout__item  u-width-1/1  u-width-1/4@medium  u-width-1/2@large">
+  <li class="o-layout__item
+             u-width-1/1  u-width-1/4@medium  u-width-1/2@large">
     100% by default, then 25% width on medium screens, before finally being 50%
     width on large screens and beyond.
   </li>
 
-  <li class="o-layout__item  u-width-1/2  u-width-1/4@medium">
+  <li class="o-layout__item
+             u-width-1/2  u-width-1/4@medium">
     50% width by default, then 25% width on medium screens and beyond.
   </li>
 
-  <li class="o-layout__item  u-width-1/2  u-width-1/4@medium">
+  <li class="o-layout__item
+             u-width-1/2  u-width-1/4@medium">
     50% width by default, then 25% width on medium screens and beyond.
   </li>
 
-  <li class="o-layout__item  u-width-1/1  u-width-1/4@medium  u-width-1/1@large">
+  <li class="o-layout__item
+             u-width-1/1  u-width-1/4@medium  u-width-1/1@large">
     100% by default, then 25% width on medium screens, before finally being 100%
     width again on large screens and beyond.
   </li>
