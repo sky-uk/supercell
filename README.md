@@ -3,6 +3,15 @@
 _Layout is an ITCSS-compatible library for building grid-like structures in our
 UIs. It can be consumed on its own, or as part of Toolkit._
 
+## Contents
+
+0. [Installation](#installation)
+0. [Configuration](#configuration)
+0. [Usage](#usage)
+  0. [Responsive](#responsive)
+0. [Options](#options)
+0. [Example](#example)
+
 ## Installation
 
 Layout is split into two core files:
