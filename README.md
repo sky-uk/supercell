@@ -1,6 +1,6 @@
-# Layout
+# Supercell
 
-_Layout is an ITCSS-compatible library for building grid-like structures in our
+_Supercell is an ITCSS-compatible library for building grid-like structures in our
 UIs. It can be consumed on its own, or as part of Toolkit._
 
 ## Contents
@@ -14,10 +14,10 @@ UIs. It can be consumed on its own, or as part of Toolkit._
 
 ## Installation
 
-Layout is split into two core files:
+Supercell is split into two core files:
 
 * **`_tools.widths.scss`**, which contains a mixin which we need to call (i.e.
-  Layout does not execute this mixin itself) in order to generate a suite of
+  Supercell does not execute this mixin itself) in order to generate a suite of
   (responsive) width classes in the format `.u-width-1/2`.
 * **`_objects.layout.scss`**, which is the actual grid-like structure that will
   lay out our UI.
@@ -41,10 +41,10 @@ half of the width of its container in a blog post.
 
 ## Configuration
 
-**N.B. If you are using Layout as part of Toolkit, you will not need to
+**N.B. If you are using Supercell as part of Toolkit, you will not need to
 configure anything. Please ignore this section.**
 
-There are only two parts of Layout that might need configuring:
+There are only two parts of Supercell that might need configuring:
 
 1. **The size of the gutters between items.**  
    To modify the size of the gutters in between layout items, simply predefine
@@ -56,7 +56,7 @@ There are only two parts of Layout that might need configuring:
    @import "objects.layout";
    ```
 2. **The method used to manage rogue whitespace between `inline-block` elements.**  
-   Because Layout uses `inline-block` (which gives us a number of ways of
+   Because Supercell uses `inline-block` (which gives us a number of ways of
    manipulating our layouts by using text-level CSS properties), we do have the
    problem of needing to remove the whitespace that is left in between each
    item.
@@ -66,7 +66,7 @@ There are only two parts of Layout that might need configuring:
    attention in the markup. These are the most reliable ways of removing the
    whitespace, but are the least user-friendly.
 
-   By default, Layout uses the `font-size: 0;` hack to remove the whitespace,
+   By default, Supercell uses the `font-size: 0;` hack to remove the whitespace,
    without authors needing to do anything in their HTML to combat the problem.
    This hack is very author-friendly, but isn’t 100% always guaranteed to work.
    If you would like to disable the `font-size: 0;` hack and are prepared to
@@ -100,12 +100,12 @@ To generate a 3, a 4, and an 8 column layout system, call the mixin like so:
 @include widths(3 4 8);
 ```
 
-Layout will now generate a full suite of classes that will satisfy every
+Supercell will now generate a full suite of classes that will satisfy every
 possible width that falls into those boundaries.
 
 ### Responsive
 
-In the interests of being as unopinionated as possible, Layout will not
+In the interests of being as unopinionated as possible, Supercell will not
 auto-generate any media queries or responsive classes. This is because the
 implementor (i.e. _you_) should be able to decide  where your breakpoints land,
 and what their values are. It also allows the implementor to use their media
