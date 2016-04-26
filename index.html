@@ -42,10 +42,11 @@
         .o-layout__item::after {
           content: "class=\"" attr(class) "\"";
           display: block;
-          font-size: 0.75rem;
+          font-size: 0.875rem;
           font-family: monospace, monospace;
           text-align: left;
           direction: ltr;
+          word-spacing: 1em;
         }
 
         .o-layout::after {
@@ -62,16 +63,17 @@
             position: absolute;
             top:  0;
             left: 24px;
-            display: none;
             background: white;
             box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.25);
             padding: 2px 4px;
             border: 1px  solid rgba(0, 0, 0, 0.25);
             border-radius: 2px;
+            opacity: 0;
+            transition: opacity 0.2s ease-in-out;
           }
 
           .o-layout__item:hover::after {
-            display: block;;
+            opacity: 1;
           }
 
       .u-demo {
