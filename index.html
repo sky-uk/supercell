@@ -38,16 +38,41 @@
         margin-bottom: 1.4375rem;
       }
 
-      .o-layout::after {
-        content: "class=\"" attr(class) "\"";
-        display: block;
-        margin-left: 24px;
-        margin-bottom: 1.5rem;
-        font-size: 1rem;
-        font-family: monospace, monospace;
-        text-align: left;
-        direction: ltr;
-      }
+      .o-layout::after,
+        .o-layout__item::after {
+          content: "class=\"" attr(class) "\"";
+          display: block;
+          font-size: 0.75rem;
+          font-family: monospace, monospace;
+          text-align: left;
+          direction: ltr;
+        }
+
+        .o-layout::after {
+          margin-left: 24px;
+          margin-bottom: 1.5rem;
+        }
+
+        .o-layout__item {
+          position: relative;
+          cursor: help;
+        }
+
+          .o-layout__item::after {
+            position: absolute;
+            top:  0;
+            left: 24px;
+            display: none;
+            background: white;
+            box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.25);
+            padding: 2px 4px;
+            border: 1px  solid rgba(0, 0, 0, 0.25);
+            border-radius: 2px;
+          }
+
+          .o-layout__item:hover::after {
+            display: block;;
+          }
 
       .u-demo {
         text-align: justify;
@@ -199,6 +224,38 @@
 
   <hr />
 
+  <h2>Fluid, responsive, reordered</h2>
+
+  <div class="o-layout">
+
+    <div class="o-layout__item  u-width-4/12@medium  u-width-3/12@large  u-push-8/12@medium  u-push-9/12@large">
+      <p class="u-demo">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies.</p>
+    </div>
+
+    <div class="o-layout__item  u-width-4/12@medium  u-width-3/12@large  u-push-3/12@large">
+      <p class="u-demo">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies.</p>
+    </div>
+
+    <div class="o-layout__item  u-width-4/12@medium  u-width-6/12@large  u-pull-8/12@medium  u-pull-6/12@large">
+      <p class="u-demo">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+    </div>
+
+    <div class="o-layout__item  u-width-4/12@medium  u-width-6/12@large">
+      <p class="u-demo">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+    </div>
+
+    <div class="o-layout__item  u-width-4/12@medium  u-width-3/12@large">
+      <p class="u-demo">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies.</p>
+    </div>
+
+    <div class="o-layout__item  u-width-4/12@medium  u-width-3/12@large">
+      <p class="u-demo">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies.</p>
+    </div>
+
+  </div>
+
+  <hr />
+
   <h2>Fluid, responsive, bottom aligned</h2>
 
   <div class="o-layout  o-layout--bottom">
@@ -265,7 +322,7 @@
 
   <h2>Fluid, responsive, combo</h2>
 
-  <div class="o-layout  o-layout--middle  o-layout--reverse">
+  <div class="o-layout  o-layout--middle  o-layout--reverse  o-layout--wide  o-layout--right">
 
     <div class="o-layout__item  u-width-4/12@medium  u-width-3/12@large">
       <p class="u-demo">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
