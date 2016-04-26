@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-GB" id="page:home">
+<html lang="en-GB" class="c-page  c-page--home" id="page:home">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, minimum-scale=1.0">
@@ -60,8 +60,12 @@
           border-radius: 2px;
         }
 
-      html:target .o-layout::after,
-        html:target .o-layout__item::after {
+      /**
+       * If we’re linking to the page via a fragment identifier, turn
+       * annotations on.
+       */
+      .c-page--home:target .o-layout::after,
+        .c-page--home:target .o-layout__item::after {
           display: block;
         }
 
@@ -74,7 +78,7 @@
           position: relative;
         }
 
-        html:target .o-layout__item {
+        .c-page--home:target .o-layout__item {
           cursor: help;
         }
 
