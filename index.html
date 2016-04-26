@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="page:home">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, minimum-scale=1.0">
@@ -47,8 +47,8 @@
 
       .o-layout::after,
         .o-layout__item::after {
+          display: none;
           content: "class=\"" attr(class) "\"";
-          display: block;
           font-size: 0.875rem;
           font-family: monospace, monospace;
           text-align: left;
@@ -58,6 +58,11 @@
           color: #00a19b;
           padding: 2px 4px;
           border-radius: 2px;
+        }
+
+      html:target .o-layout::after,
+        html:target .o-layout__item::after {
+          display: block;
         }
 
         .o-layout::after {
@@ -105,8 +110,7 @@
   <p>Supercell provides fluid, responsive, nestable, reorderable, mobile-first
   layouts.</p>
 
-  <p>Fire up <i>Inspector</i> and take a look at the markup and classes being
-  used to produce the following layouts.</p>
+  <p><a href="#page:home">Enable annotations</a> | <a href="#0">Disable annotations</a></p>
 
   <hr />
 
