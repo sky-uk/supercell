@@ -97,7 +97,7 @@ $global-spacing-unit-large: round($global-spacing-unit * 2) !default;
  * Smaller gutters between items.
  */
 .o-layout--narrow {
-  margin-left: $global-spacing-unit-small;
+  margin-left: -$global-spacing-unit-small;
 
   > .o-layout__item {
     padding-left: $global-spacing-unit-small;
