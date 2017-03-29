@@ -20,24 +20,24 @@
 //
 // To create a non-responsive 12 column grid system, simply call:
 //
-//   @include widths(12);
+//   @include supercell(12);
 //
 // To create a 3 and 4 column grid system on medium sized screens:
 //
 //   @media screen and (min-width: 720px) {
-//     @include widths(3 4, \@medium);
+//     @include supercell(3 4, \@medium);
 //   }
 //
 // To create a 1, 2, 3 and 4 column grid system on large sized screens:
 //
 //   @media screen and (min-width: 1024px) {
-//     @include widths(1 2 3 4, \@large);
+//     @include supercell(1 2 3 4, \@large);
 //   }
 //
 // Basically, we just call the mixin again but inside of a breakpoint of our
 // choosing, and with the additional responsive suffix (e.g. `\@large`).
 
-@mixin widths($columns, $breakpoint: null) {
+@mixin supercell($columns, $breakpoint: null) {
 
   // Loop through the number of columns for each denominator of our fractions.
   @each $denominator in $columns {
@@ -78,4 +78,13 @@
 
   }
 
+}
+
+// In order to support the legacy `widths()` mixin, let’s create a simple
+// wrapper around the new `supercell()` mixin. This allows developers to use the
+// older Supercell API. This will be removed in 2.0.0.
+@mixin widths($args...) {
+  @include supercell($args...);
+
+  @warn "Support for `widths()` will be removed in Supercell @2.0.0. Use `supercell()` instead."
 }
