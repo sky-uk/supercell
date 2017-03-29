@@ -58,9 +58,19 @@ $use-markup-fix: false !default;
 // We can redefine a spacing unit here if we want to use the layout system as a
 // standalone object. If we don’t define anything new this will simply default
 // back to whaever spacing unit the project uses.
-$global-spacing-unit: 24px !default;
-$global-spacing-unit-small: round($global-spacing-unit / 2) !default;
-$global-spacing-unit-large: round($global-spacing-unit * 2) !default;
+$supercell-spacing-unit: 24px !default;
+
+// Private/framework-only reassignment. Do not alter anything below.
+$_supercell-spacing-unit-small: round($supercell-spacing-unit / 2) !default;
+$_supercell-spacing-unit-large: round($supercell-spacing-unit * 2) !default;
+
+@if ($_supercell-spacing-unit-small != round($supercell-spacing-unit / 2)) {
+  @error "The value of `$_supercell-spacing-unit-small` must not be changed.";
+}
+
+@if ($_supercell-spacing-unit-large != round($supercell-spacing-unit * 2)) {
+  @error "The value of `$_supercell-spacing-unit-large` must not be changed.";
+}
 
 /* Default/mandatory classes.
    =========================================== */
@@ -69,7 +79,7 @@ $global-spacing-unit-large: round($global-spacing-unit * 2) !default;
   padding: 0;
   list-style: none;
   box-sizing: border-box;
-  margin-left: -$global-spacing-unit;
+  margin-left: -$supercell-spacing-unit;
 
   @if ($use-markup-fix == false) {
     font-size: 0;
@@ -82,7 +92,7 @@ $global-spacing-unit-large: round($global-spacing-unit * 2) !default;
   vertical-align: top;
   width: 100%;
   box-sizing: border-box;
-  padding-left: $global-spacing-unit;
+  padding-left: $supercell-spacing-unit;
 
   @if ($use-markup-fix == false) {
     font-size: 1rem;
@@ -97,10 +107,10 @@ $global-spacing-unit-large: round($global-spacing-unit * 2) !default;
  * Smaller gutters between items.
  */
 .o-layout--narrow {
-  margin-left: -$global-spacing-unit-small;
+  margin-left: -$_supercell-spacing-unit-small;
 
   > .o-layout__item {
-    padding-left: $global-spacing-unit-small;
+    padding-left: $_supercell-spacing-unit-small;
   }
 
 }
@@ -109,10 +119,10 @@ $global-spacing-unit-large: round($global-spacing-unit * 2) !default;
  * Larger gutters between items.
  */
 .o-layout--wide {
-  margin-left: -$global-spacing-unit-large;
+  margin-left: -$_supercell-spacing-unit-large;
 
   > .o-layout__item {
-    padding-left: $global-spacing-unit-large;
+    padding-left: $_supercell-spacing-unit-large;
   }
 
 }
@@ -152,7 +162,6 @@ $global-spacing-unit-large: round($global-spacing-unit * 2) !default;
  *   - 2 - - 5
  */
 .o-layout--middle {
-
   > .o-layout__item {
     vertical-align: middle;
   }
@@ -179,7 +188,6 @@ $global-spacing-unit-large: round($global-spacing-unit * 2) !default;
  *   1 2 3 4 5
  */
 .o-layout--bottom {
-
   > .o-layout__item {
     vertical-align: bottom;
   }
@@ -268,9 +276,8 @@ $global-spacing-unit-large: round($global-spacing-unit * 2) !default;
  *   1 2 3 4 5
  */
 .o-layout--spaced {
-
   > .o-layout__item {
-    margin-bottom: $global-spacing-unit;
+    margin-bottom: $supercell-spacing-unit;
   }
 
   /**
@@ -278,17 +285,15 @@ $global-spacing-unit-large: round($global-spacing-unit * 2) !default;
    * the vertical gutters accordingly.
    */
   &.o-layout--narrow {
-
     > .o-layout__item {
-      margin-bottom: $global-spacing-unit-small;
+      margin-bottom: $_supercell-spacing-unit-small;
     }
 
   }
 
   &.o-layout--wide {
-
     > .o-layout__item {
-      margin-bottom: $global-spacing-unit-large;
+      margin-bottom: $_supercell-spacing-unit-large;
     }
 
   }
