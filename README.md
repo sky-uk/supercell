@@ -5,12 +5,12 @@ UIs. It can be consumed on its own, or as part of Toolkit._
 
 ## Contents
 
-0. [Installation](#installation)
-0. [Configuration](#configuration)
-0. [Usage](#usage)
-  0. [Responsive](#responsive)
-0. [Options](#options)
-0. [Example](#example)
+1. [Installation](#installation)
+2. [Configuration](#configuration)
+3. [Usage](#usage)
+  1. [Responsive](#responsive)
+4. [Options](#options)
+5. [Example](#example)
 
 ## Installation
 
@@ -36,8 +36,8 @@ sized accordingly, e.g.:
 
 The reason that the layout and the widths are kept in different
 files/suites-of-classes is simple: it allows us to use our width classes (e.g.
-`.u-1/2@small`) on non-layout related bits of UI, for example, making an `img`
-half of the width of its container in a blog post.
+`.u-width-1/2@small`) on non-layout related bits of UI, for example, making an
+`img` half of the width of its container in a blog post.
 
 ## Configuration
 
