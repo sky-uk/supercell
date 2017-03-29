@@ -85,19 +85,19 @@ like to create. To create a 12 column layout system, simply call the mixin like
 so:
 
 ```SCSS
-@include widths(12);
+@include supercell(12);
 ```
 
 To generate a 12 and a 16 column layout system, call the mixin like so:
 
 ```SCSS
-@include widths(12 16);
+@include supercell(12 16);
 ```
 
 To generate a 3, a 4, and an 8 column layout system, call the mixin like so:
 
 ```SCSS
-@include widths(3 4 8);
+@include supercell(3 4 8);
 ```
 
 Supercell will now generate a full suite of classes that will satisfy every
@@ -124,7 +124,7 @@ To generate a 12 column layout system for use on screens over 1200px wide:
 
 ```SCSS
 @media screen and (min-width: 1200px) {
-  @include widths(12, \@large);
+  @include supercell(12, \@large);
 }
 ```
 
