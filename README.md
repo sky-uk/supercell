@@ -48,11 +48,11 @@ There are only two parts of Supercell that might need configuring:
 
 1. **The size of the gutters between items.**  
    To modify the size of the gutters in between layout items, simply predefine
-   the `$global-spacing-unit` variable _just before_ you `@import`
+   the `$supercell-spacing-unit` variable _just before_ you `@import`
    `objects.layout.scss`, like so:
 
    ```SCSS
-   $global-spacing-unit: 20px;
+   $supercell-spacing-unit: 20px;
    @import "objects.layout";
    ```
 2. **The method used to manage rogue whitespace between `inline-block` elements.**  
@@ -147,12 +147,12 @@ wide—that look like this:
   .u-width-11/12@large {
     width: 91.666666667% !important;
   }
-    
+
 
   .u-width-12\/12@large {
     width: 100% !important;
   }
-    
+
 
 }
 ```
