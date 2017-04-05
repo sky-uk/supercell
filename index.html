@@ -6,6 +6,7 @@
 
     <title>Supercell – complex responsive layout module</title>
 
+    <link rel="stylesheet" href="https://www.sky.com/assets/toolkit/latest/toolkit.css">
     <style>
 
       /**
@@ -14,37 +15,6 @@
        *
        * -- Harry
        */
-
-      * {
-        margin:  0;
-        padding: 0;
-        font-size: 100%;
-        box-sizing: border-box;
-      }
-
-      h1, h2, h3, h4, h5, h6,
-      p {
-        margin-bottom: 1.5rem;
-      }
-
-      html {
-        font: menu;
-        font-size: 100%;
-        line-height: 1.5;
-        padding: 24px;
-      }
-
-      h1, h2, h3, h4, h5, h6 {
-        font-size: 1.5rem;
-        line-height: 1;
-      }
-
-      hr {
-        border: none;
-        border-bottom: 1px solid #ccc;
-        margin-bottom: 1.4375rem;
-      }
-
       .o-layout::after,
         .o-layout__item::after {
           display: none;
@@ -102,6 +72,7 @@
 
       .u-demo {
         background-color: #ffd !important;
+        /*background-color: white !important;*/
       }
 
     </style>
@@ -111,267 +82,274 @@
 </head>
 <body>
 
-  <h1>Supercell</h1>
+  <div class="o-container">
 
-  <p>Supercell provides fluid, responsive, nestable, reorderable, mobile-first
-  layouts.</p>
+    <h1 class="c-heading-alpha u-text-center u-margin-top">Supercell</h1>
 
-  <p><a href="#page:home">Enable annotations</a> / <a href="#0">Disable annotations</a> / <a href="https://github.com/sky-uk/supercell">GitHub</a></p>
+    <p class="c-text-lead u-text-center">Fluid, responsive, nestable, reorderable, mobile-first
+    layouts.</p>
 
-  <hr />
+    <p class="u-text-center"><a href="#page:home">Enable annotations</a> / <a href="#0">Disable annotations</a></p>
 
-  <h2>Fluid, non-responsive</h2>
+    <p class="u-text-center"><a href="https://github.com/sky-uk/supercell" class="c-btn c-btn--secondary">View on GitHub</a></p>
 
-  <div class="o-layout">
+    <p class="u-text-center"><a href="https://www.npmjs.com/package/supercell">npm</a> install supercell</p>
 
-    <div class="o-layout__item  u-width-3/12">
-      <p class="u-demo">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies.</p>
+    <hr class="c-divider" />
+
+    <h2 class="c-heading-delta">Fluid, non-responsive</h2>
+
+    <div class="o-layout">
+
+      <div class="o-layout__item  u-width-3/12">
+        <p class="c-text-body u-demo">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies.</p>
+      </div>
+
+      <div class="o-layout__item  u-width-3/12">
+        <p class="c-text-body u-demo">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies.</p>
+      </div>
+
+      <div class="o-layout__item  u-width-6/12">
+        <p class="c-text-body u-demo">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+      </div>
+
+      <div class="o-layout__item  u-width-6/12">
+        <p class="c-text-body u-demo">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+      </div>
+
+      <div class="o-layout__item  u-width-3/12">
+        <p class="c-text-body u-demo">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies.</p>
+      </div>
+
+      <div class="o-layout__item  u-width-3/12">
+        <p class="c-text-body u-demo">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies.</p>
+      </div>
+
     </div>
 
-    <div class="o-layout__item  u-width-3/12">
-      <p class="u-demo">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies.</p>
+    <hr class="c-divider"/>
+
+    <h2 class="c-heading-delta">Fluid, responsive</h2>
+
+    <div class="o-layout">
+
+      <div class="o-layout__item  u-width-4/12@medium  u-width-3/12@large">
+        <p class="c-text-body u-demo">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies.</p>
+      </div>
+
+      <div class="o-layout__item  u-width-4/12@medium  u-width-3/12@large">
+        <p class="c-text-body u-demo">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies.</p>
+      </div>
+
+      <div class="o-layout__item  u-width-4/12@medium  u-width-6/12@large">
+        <p class="c-text-body u-demo">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+      </div>
+
+      <div class="o-layout__item  u-width-4/12@medium  u-width-6/12@large">
+        <p class="c-text-body u-demo">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+      </div>
+
+      <div class="o-layout__item  u-width-4/12@medium  u-width-3/12@large">
+        <p class="c-text-body u-demo">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies.</p>
+      </div>
+
+      <div class="o-layout__item  u-width-4/12@medium  u-width-3/12@large">
+        <p class="c-text-body u-demo">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies.</p>
+      </div>
+
     </div>
 
-    <div class="o-layout__item  u-width-6/12">
-      <p class="u-demo">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+    <hr class="c-divider"/>
+
+    <h2 class="c-heading-delta">Fluid, responsive, reversed</h2>
+
+    <div class="o-layout  o-layout--reverse">
+
+      <div class="o-layout__item  u-width-4/12@medium  u-width-3/12@large">
+        <p class="c-text-body u-demo">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies.</p>
+      </div>
+
+      <div class="o-layout__item  u-width-4/12@medium  u-width-3/12@large">
+        <p class="c-text-body u-demo">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies.</p>
+      </div>
+
+      <div class="o-layout__item  u-width-4/12@medium  u-width-6/12@large">
+        <p class="c-text-body u-demo">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+      </div>
+
+      <div class="o-layout__item  u-width-4/12@medium  u-width-6/12@large">
+        <p class="c-text-body u-demo">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+      </div>
+
+      <div class="o-layout__item  u-width-4/12@medium  u-width-3/12@large">
+        <p class="c-text-body u-demo">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies.</p>
+      </div>
+
+      <div class="o-layout__item  u-width-4/12@medium  u-width-3/12@large">
+        <p class="c-text-body u-demo">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies.</p>
+      </div>
+
     </div>
 
-    <div class="o-layout__item  u-width-6/12">
-      <p class="u-demo">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+    <hr class="c-divider"/>
+
+    <h2 class="c-heading-delta">Fluid, responsive, no gutters</h2>
+
+    <div class="o-layout  o-layout--flush">
+
+      <div class="o-layout__item  u-width-4/12@medium  u-width-3/12@large">
+        <p class="c-text-body u-demo">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies.</p>
+      </div>
+
+      <div class="o-layout__item  u-width-4/12@medium  u-width-3/12@large">
+        <p class="c-text-body u-demo">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies.</p>
+      </div>
+
+      <div class="o-layout__item  u-width-4/12@medium  u-width-6/12@large">
+        <p class="c-text-body u-demo">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+      </div>
+
+      <div class="o-layout__item  u-width-4/12@medium  u-width-6/12@large">
+        <p class="c-text-body u-demo">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+      </div>
+
+      <div class="o-layout__item  u-width-4/12@medium  u-width-3/12@large">
+        <p class="c-text-body u-demo">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies.</p>
+      </div>
+
+      <div class="o-layout__item  u-width-4/12@medium  u-width-3/12@large">
+        <p class="c-text-body u-demo">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies.</p>
+      </div>
+
     </div>
 
-    <div class="o-layout__item  u-width-3/12">
-      <p class="u-demo">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies.</p>
+    <hr class="c-divider"/>
+
+    <h2 class="c-heading-delta">Fluid, responsive, reordered</h2>
+
+    <div class="o-layout">
+
+      <div class="o-layout__item  u-width-4/12@medium  u-width-3/12@large  u-push-8/12@medium  u-push-9/12@large">
+        <p class="c-text-body u-demo">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies.</p>
+      </div>
+
+      <div class="o-layout__item  u-width-4/12@medium  u-width-3/12@large  u-push-3/12@large">
+        <p class="c-text-body u-demo">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies.</p>
+      </div>
+
+      <div class="o-layout__item  u-width-4/12@medium  u-width-6/12@large  u-pull-8/12@medium  u-pull-6/12@large">
+        <p class="c-text-body u-demo">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+      </div>
+
+      <div class="o-layout__item  u-width-4/12@medium  u-width-6/12@large">
+        <p class="c-text-body u-demo">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+      </div>
+
+      <div class="o-layout__item  u-width-4/12@medium  u-width-3/12@large">
+        <p class="c-text-body u-demo">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies.</p>
+      </div>
+
+      <div class="o-layout__item  u-width-4/12@medium  u-width-3/12@large">
+        <p class="c-text-body u-demo">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies.</p>
+      </div>
+
     </div>
 
-    <div class="o-layout__item  u-width-3/12">
-      <p class="u-demo">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies.</p>
+    <hr class="c-divider"/>
+
+    <h2 class="c-heading-delta">Fluid, responsive, bottom aligned</h2>
+
+    <div class="o-layout  o-layout--bottom">
+
+      <div class="o-layout__item  u-width-4/12@medium  u-width-3/12@large">
+        <p class="c-text-body u-demo">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+      </div>
+
+      <div class="o-layout__item  u-width-4/12@medium  u-width-3/12@large">
+        <p class="c-text-body u-demo">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+      </div>
+
+      <div class="o-layout__item  u-width-4/12@medium  u-width-6/12@large">
+        <p class="c-text-body u-demo">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+      </div>
+
+      <div class="o-layout__item  u-width-4/12@medium  u-width-6/12@large">
+        <p class="c-text-body u-demo">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+      </div>
+
+      <div class="o-layout__item  u-width-4/12@medium  u-width-3/12@large">
+        <p class="c-text-body u-demo">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+      </div>
+
+      <div class="o-layout__item  u-width-4/12@medium  u-width-3/12@large">
+        <p class="c-text-body u-demo">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+      </div>
+
     </div>
 
-  </div>
+    <hr class="c-divider"/>
 
-  <hr />
+    <h2 class="c-heading-delta">Fluid, responsive, middle aligned</h2>
 
-  <h2>Fluid, responsive</h2>
+    <div class="o-layout  o-layout--middle">
 
-  <div class="o-layout">
+      <div class="o-layout__item  u-width-4/12@medium  u-width-3/12@large">
+        <p class="c-text-body u-demo">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+      </div>
 
-    <div class="o-layout__item  u-width-4/12@medium  u-width-3/12@large">
-      <p class="u-demo">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies.</p>
+      <div class="o-layout__item  u-width-4/12@medium  u-width-3/12@large">
+        <p class="c-text-body u-demo">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+      </div>
+
+      <div class="o-layout__item  u-width-4/12@medium  u-width-6/12@large">
+        <p class="c-text-body u-demo">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+      </div>
+
+      <div class="o-layout__item  u-width-4/12@medium  u-width-6/12@large">
+        <p class="c-text-body u-demo">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+      </div>
+
+      <div class="o-layout__item  u-width-4/12@medium  u-width-3/12@large">
+        <p class="c-text-body u-demo">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+      </div>
+
+      <div class="o-layout__item  u-width-4/12@medium  u-width-3/12@large">
+        <p class="c-text-body u-demo">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+      </div>
+
     </div>
 
-    <div class="o-layout__item  u-width-4/12@medium  u-width-3/12@large">
-      <p class="u-demo">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies.</p>
+    <hr class="c-divider"/>
+
+    <h2 class="c-heading-delta">Fluid, responsive, combo</h2>
+
+    <div class="o-layout  o-layout--middle  o-layout--reverse  o-layout--wide  o-layout--right">
+
+      <div class="o-layout__item  u-width-4/12@medium  u-width-3/12@large">
+        <p class="c-text-body u-demo">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+      </div>
+
+      <div class="o-layout__item  u-width-4/12@medium  u-width-3/12@large">
+        <p class="c-text-body u-demo">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+      </div>
+
+      <div class="o-layout__item  u-width-4/12@medium  u-width-6/12@large">
+        <p class="c-text-body u-demo">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+      </div>
+
+      <div class="o-layout__item  u-width-4/12@medium  u-width-6/12@large">
+        <p class="c-text-body u-demo">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+      </div>
+
+      <div class="o-layout__item  u-width-4/12@medium  u-width-3/12@large">
+        <p class="c-text-body u-demo">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+      </div>
+
+      <div class="o-layout__item  u-width-4/12@medium  u-width-3/12@large">
+        <p class="c-text-body u-demo">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+      </div>
+
     </div>
-
-    <div class="o-layout__item  u-width-4/12@medium  u-width-6/12@large">
-      <p class="u-demo">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-    </div>
-
-    <div class="o-layout__item  u-width-4/12@medium  u-width-6/12@large">
-      <p class="u-demo">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-    </div>
-
-    <div class="o-layout__item  u-width-4/12@medium  u-width-3/12@large">
-      <p class="u-demo">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies.</p>
-    </div>
-
-    <div class="o-layout__item  u-width-4/12@medium  u-width-3/12@large">
-      <p class="u-demo">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies.</p>
-    </div>
-
-  </div>
-
-  <hr />
-
-  <h2>Fluid, responsive, reversed</h2>
-
-  <div class="o-layout  o-layout--reverse">
-
-    <div class="o-layout__item  u-width-4/12@medium  u-width-3/12@large">
-      <p class="u-demo">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies.</p>
-    </div>
-
-    <div class="o-layout__item  u-width-4/12@medium  u-width-3/12@large">
-      <p class="u-demo">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies.</p>
-    </div>
-
-    <div class="o-layout__item  u-width-4/12@medium  u-width-6/12@large">
-      <p class="u-demo">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-    </div>
-
-    <div class="o-layout__item  u-width-4/12@medium  u-width-6/12@large">
-      <p class="u-demo">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-    </div>
-
-    <div class="o-layout__item  u-width-4/12@medium  u-width-3/12@large">
-      <p class="u-demo">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies.</p>
-    </div>
-
-    <div class="o-layout__item  u-width-4/12@medium  u-width-3/12@large">
-      <p class="u-demo">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies.</p>
-    </div>
-
-  </div>
-
-  <hr />
-
-  <h2>Fluid, responsive, no gutters</h2>
-
-  <div class="o-layout  o-layout--flush">
-
-    <div class="o-layout__item  u-width-4/12@medium  u-width-3/12@large">
-      <p class="u-demo">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies.</p>
-    </div>
-
-    <div class="o-layout__item  u-width-4/12@medium  u-width-3/12@large">
-      <p class="u-demo">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies.</p>
-    </div>
-
-    <div class="o-layout__item  u-width-4/12@medium  u-width-6/12@large">
-      <p class="u-demo">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-    </div>
-
-    <div class="o-layout__item  u-width-4/12@medium  u-width-6/12@large">
-      <p class="u-demo">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-    </div>
-
-    <div class="o-layout__item  u-width-4/12@medium  u-width-3/12@large">
-      <p class="u-demo">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies.</p>
-    </div>
-
-    <div class="o-layout__item  u-width-4/12@medium  u-width-3/12@large">
-      <p class="u-demo">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies.</p>
-    </div>
-
-  </div>
-
-  <hr />
-
-  <h2>Fluid, responsive, reordered</h2>
-
-  <div class="o-layout">
-
-    <div class="o-layout__item  u-width-4/12@medium  u-width-3/12@large  u-push-8/12@medium  u-push-9/12@large">
-      <p class="u-demo">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies.</p>
-    </div>
-
-    <div class="o-layout__item  u-width-4/12@medium  u-width-3/12@large  u-push-3/12@large">
-      <p class="u-demo">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies.</p>
-    </div>
-
-    <div class="o-layout__item  u-width-4/12@medium  u-width-6/12@large  u-pull-8/12@medium  u-pull-6/12@large">
-      <p class="u-demo">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-    </div>
-
-    <div class="o-layout__item  u-width-4/12@medium  u-width-6/12@large">
-      <p class="u-demo">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-    </div>
-
-    <div class="o-layout__item  u-width-4/12@medium  u-width-3/12@large">
-      <p class="u-demo">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies.</p>
-    </div>
-
-    <div class="o-layout__item  u-width-4/12@medium  u-width-3/12@large">
-      <p class="u-demo">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies.</p>
-    </div>
-
-  </div>
-
-  <hr />
-
-  <h2>Fluid, responsive, bottom aligned</h2>
-
-  <div class="o-layout  o-layout--bottom">
-
-    <div class="o-layout__item  u-width-4/12@medium  u-width-3/12@large">
-      <p class="u-demo">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-    </div>
-
-    <div class="o-layout__item  u-width-4/12@medium  u-width-3/12@large">
-      <p class="u-demo">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-    </div>
-
-    <div class="o-layout__item  u-width-4/12@medium  u-width-6/12@large">
-      <p class="u-demo">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-    </div>
-
-    <div class="o-layout__item  u-width-4/12@medium  u-width-6/12@large">
-      <p class="u-demo">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-    </div>
-
-    <div class="o-layout__item  u-width-4/12@medium  u-width-3/12@large">
-      <p class="u-demo">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-    </div>
-
-    <div class="o-layout__item  u-width-4/12@medium  u-width-3/12@large">
-      <p class="u-demo">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-    </div>
-
-  </div>
-
-  <hr />
-
-  <h2>Fluid, responsive, middle aligned</h2>
-
-  <div class="o-layout  o-layout--middle">
-
-    <div class="o-layout__item  u-width-4/12@medium  u-width-3/12@large">
-      <p class="u-demo">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-    </div>
-
-    <div class="o-layout__item  u-width-4/12@medium  u-width-3/12@large">
-      <p class="u-demo">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-    </div>
-
-    <div class="o-layout__item  u-width-4/12@medium  u-width-6/12@large">
-      <p class="u-demo">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-    </div>
-
-    <div class="o-layout__item  u-width-4/12@medium  u-width-6/12@large">
-      <p class="u-demo">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-    </div>
-
-    <div class="o-layout__item  u-width-4/12@medium  u-width-3/12@large">
-      <p class="u-demo">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-    </div>
-
-    <div class="o-layout__item  u-width-4/12@medium  u-width-3/12@large">
-      <p class="u-demo">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-    </div>
-
-  </div>
-
-  <hr />
-
-  <h2>Fluid, responsive, combo</h2>
-
-  <div class="o-layout  o-layout--middle  o-layout--reverse  o-layout--wide  o-layout--right">
-
-    <div class="o-layout__item  u-width-4/12@medium  u-width-3/12@large">
-      <p class="u-demo">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-    </div>
-
-    <div class="o-layout__item  u-width-4/12@medium  u-width-3/12@large">
-      <p class="u-demo">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-    </div>
-
-    <div class="o-layout__item  u-width-4/12@medium  u-width-6/12@large">
-      <p class="u-demo">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-    </div>
-
-    <div class="o-layout__item  u-width-4/12@medium  u-width-6/12@large">
-      <p class="u-demo">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-    </div>
-
-    <div class="o-layout__item  u-width-4/12@medium  u-width-3/12@large">
-      <p class="u-demo">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-    </div>
-
-    <div class="o-layout__item  u-width-4/12@medium  u-width-3/12@large">
-      <p class="u-demo">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-    </div>
-
   </div>
 
 </body>
