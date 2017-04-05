@@ -1,0 +1,23 @@
+/* ==========================================================================
+   COMPONENTS / LINKS
+   ========================================================================== */
+
+/**
+ * Adding icons to the end of any external links
+ *
+ * 1. c-link-external currently uses an inline Base64 png chevron icon.
+ *    This will eventually be replaced by SVG.
+ */
+.c-link-external {
+  &::after {
+    content: "";
+    display: inline-block;
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAABACAMAAACnZz6fAAAAG1BMVEUAAAAAcskAcskAcskAcskAcskAcskAcskAcsk09XWDAAAACHRSTlMAMGBwgI+f7y/+m9wAAABGSURBVHgB7c3LDYBADAPRIXyc/iuGCmJuK6085ycNUFIxd/fXjKrbIrVHxw4oKCgIj/4b/3KkQkJC1hI8gdMTeDyBS5rJC7vhD7kuyMbFAAAAAElFTkSuQmCC"); /* [1] */
+    background-repeat: no-repeat;
+    background-size: contain;
+    vertical-align: text-bottom;
+    margin-left: $global-spacing-unit-small;
+    width: 1em;
+    height: 1em;
+  }
+}

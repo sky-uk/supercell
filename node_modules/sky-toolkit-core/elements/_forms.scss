@@ -1,0 +1,24 @@
+/* ==========================================================================
+   ELEMENTS / FORMS
+   ========================================================================== */
+
+/**
+ * Semantically, we’d like all forms to be built with FIELDSETs and LEGENDs, but
+ * we currently don’t want to visually see them.
+ */
+fieldset {
+  border: none;
+}
+
+legend {
+  @include hide-visually();
+}
+
+/**
+ * Make sure our form elements don’t use any UA-specific font styles: we want
+ * them to use ours. This may need reverting as more design information becomes
+ * available, and we start putting together more complete forms.
+ */
+input {
+  font: inherit;
+}

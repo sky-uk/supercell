@@ -1,0 +1,20 @@
+/* ==========================================================================
+   SETTINGS
+   ========================================================================== */
+
+/**
+ * CONTENTS
+ *
+ * Config...............Configuration and environment settings.
+ * Globals..............Globally available settings for the entire project.
+ * Colors...............Brand colours are centrally managed for later use.
+ * Typography...........Define our typographical settings in one place.
+ * Breakpoints..........Hold sitewide breakpoint values in an array for use with
+ *                      Sass MQ.
+ */
+
+@import "config";
+@import "globals";
+@import "colors";
+@import "typography";
+@import "breakpoints";

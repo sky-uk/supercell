@@ -1,0 +1,163 @@
+@import "sky-toolkit-core/tools";
+
+.o-layout,
+.o-layout__item {
+  &::after {
+    display: none;
+    content: "class=\"" attr(class) "\"";
+    font-size: text(text-body-small);
+    font-family: monospace, monospace;
+    text-align: left;
+    direction: ltr;
+    background-color: color(grey-50);
+    color: color(white);
+    padding: 2px 4px;
+    border-radius: $global-border-radius;
+  }
+}
+
+.o-layout {
+  &::after {
+    margin-left: $global-spacing-unit;
+    margin-bottom: $global-spacing-unit;
+  }
+}
+
+/**
+ * If we’re linking to the page via a fragment identifier, turn
+ * annotations on.
+ */
+.c-page--home:target .o-layout::after,
+.c-page--home:target .o-layout__item::after {
+  display: block;
+}
+
+.c-page--home:target .o-layout__item {
+  cursor: help;
+}
+
+/**
+ * This is a hard-coded mess of magic numbers. I’m sorry.
+ */
+.o-layout__item {
+  position: relative;
+
+  &::after {
+    position: absolute;
+    top: 0;
+    left: $global-spacing-unit;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+    opacity: 0;
+    transition: opacity $global-animation-speed-fast ease-in-out;
+    text-indent: -$global-spacing-unit-large;
+    padding-left: $global-spacing-unit-large + 5px;
+  }
+
+  &:hover {
+    &::after {
+      opacity: 1;
+    }
+  }
+}
+
+.o-layout--flush {
+  &::after {
+    margin-left: 0;
+  }
+
+  .o-layout__item {
+    &::after {
+      left: 0;
+    }
+  }
+}
+
+.o-layout--wide {
+  &::after {
+    margin-left: $global-spacing-unit-large;
+  }
+
+  .o-layout__item {
+    &::after {
+      left: $global-spacing-unit-large;
+    }
+  }
+}
+
+.c-demo-item {
+  background-color: color(white);
+  border: $global-border-width solid color(grey-20);
+  border-radius: $global-border-radius;
+  padding: $global-spacing-unit-large 0;
+}
+
+.c-btn--github {
+  background-color: transparent;
+  border-color: color(text);
+  color: color(text);
+  position: relative;
+  padding-right: $global-spacing-unit*1.75;
+
+  .c-btn__icon-outer {
+    position: absolute;
+    right: $global-spacing-unit-tiny;
+    top: 0;
+  }
+
+  .c-btn__icon-inner {
+    fill: color(text);
+    transition: fill $global-animation-speed ease;
+  }
+
+  &:hover {
+    background-color: color(text);
+    border-color: color(text);
+    color: color(white);
+
+    .c-btn__icon-inner {
+      fill: color(white);
+    }
+  }
+}
+
+.c-code-inline {
+  background-color: color(white);
+  border: $global-border-width solid color(grey-10);
+  border-radius: $global-border-radius;
+  color: color(text);
+  font-size: inherit;
+  line-height: inherit;
+  margin: 0 2px;
+  padding: 2px 5px;
+  font-family: monospace, monospace;
+}
+
+.c-footer {
+  display: block;
+  background-color: color(white);
+  margin: 0;
+  overflow: hidden;
+  padding-top: 30px;
+  box-shadow: inset 0 7px 14px -7px #909090;
+}
+
+// Build the grids
+// Create all of our classes for any/all breakpoints (e.g. `.u-width-1/2`).
+
+// Build one twelve-column grid system:
+@include supercell(12);
+
+// Build a twelve-column grid system for use at small-and-up sizes:
+@include mq($from: small) {
+  @include supercell(12, \@small);
+}
+
+// Build a twelve-column grid system for use at medium-and-up sizes:
+@include mq($from: medium) {
+  @include supercell(12, \@medium);
+}
+
+// Build a twelve-column grid system for use at medium-and-up sizes:
+@include mq($from: large) {
+  @include supercell(12, \@large);
+}

@@ -1,0 +1,18 @@
+machine:
+  node:
+    version: 6.1.0
+
+general:
+  artifacts:
+    - "dist/"
+    - "package.json"
+
+test:
+  override:
+    - npm run dist
+
+experimental:
+  notify:
+    branches:
+      only:
+        - master
