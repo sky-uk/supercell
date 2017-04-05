@@ -1,16 +1,26 @@
-# Supercell
+[![npm version](https://badge.fury.io/js/supercell.svg)](https://badge.fury.io/js/supercell)
 
-_Supercell is an ITCSS-compatible library for building grid-like structures in our
-UIs. It can be consumed on its own, or as part of Toolkit._
+# Supercell 
+
+> **Fluid, responsive, nestable, reorderable, mobile-first layouts.**
+
+Supercell is an [ITCSS-compatible](https://twitter.com/itcss_io) library for building grid-like structures in our
+UIs. 
+
+It can be consumed on its own, or as part of [Toolkit](https://github.com/sky-uk/toolkit).
 
 ## Contents
 
 1. [Installation](#installation)
 2. [Configuration](#configuration)
 3. [Usage](#usage)
-  1. [Responsive](#responsive)
-4. [Options](#options)
-5. [Example](#example)
+4. [Responsive](#responsive)
+5. [Options](#options)
+6. [Example](#example)
+7. [Versioning](#versioning)
+8. [Contributing](#contributing)
+
+**N.B.** If you are using Supercell as part of [Toolkit](https://github.com/sky-uk/toolkit), you will not need to install or configure anything. Please ignore the first two sections.
 
 ## Installation
 
@@ -24,7 +34,7 @@ Supercell is split into two core files:
 
 The classes from `_objects.layout.scss` are augmented by the classes generated
 by `_tools.widths.scss`’ mixin in order to create layout structures that are
-sized accordingly, e.g.:
+sized accordingly, for example:
 
 ```HTML
 <div class="o-layout">
@@ -40,9 +50,6 @@ files/suites-of-classes is simple: it allows us to use our width classes (e.g.
 `img` half of the width of its container in a blog post.
 
 ## Configuration
-
-**N.B. If you are using Supercell as part of Toolkit, you will not need to
-configure anything. Please ignore this section.**
 
 There are only two parts of Supercell that might need configuring:
 
@@ -80,8 +87,10 @@ There are only two parts of Supercell that might need configuring:
 ## Usage
 
 To generate your width classes (e.g. `.u-width-1/2`) you need to call the
-`widths()` mixin in your project, passing in the number of columns you would
-like to create. To create a 12 column layout system, simply call the mixin like
+`supercell()` mixin in your project, passing in the number of columns you would
+like to create. 
+
+To create a 12 column layout system, simply call the mixin like
 so:
 
 ```SCSS
@@ -209,3 +218,18 @@ provides.
 
 </ul>
 ```
+
+## Versioning
+
+Supercell follows Semantic Versioning to help manage the impact of releasing new library versions.
+
+
+## Contributing
+
+We appreciate **any** contribution to Supercell.
+
+We keep a list of features and bugs in the [issue tracker](https://github.com/sky-uk/supercell/issues).
+
+### Maintainers
+
+Supercell is maintained by the [Toolkit Maintainers](https://github.com/sky-uk/toolkit#maintainers) and [Harry Roberts](https://github.com/csswizardry).
