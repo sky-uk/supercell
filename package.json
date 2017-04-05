@@ -1,0 +1,40 @@
+{
+  "name": "supercell",
+  "version": "1.1.0",
+  "description": "Grid-like layout system.",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "stylelint '**/*.scss' --syntax scss",
+    "clean": "rm -rf demo.css",
+    "build": "npm run clean && cat ./_demo.scss | node-sass --include-path node_modules/ --output-style compressed > demo.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sky-uk/supercell.git"
+  },
+  "keywords": [
+    "grid",
+    "grid system",
+    "layout"
+  ],
+  "authors": [
+    "Harry Roberts <csswizardry@gmail.com> (https://csswizardry.com)",
+    "Sky UK"
+  ],
+  "contributors": [
+    "Joe Bell <joe@joebell.co.uk> (https://github.com/joebell93)"
+  ],
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/sky-uk/supercell/issues"
+  },
+  "homepage": "https://github.com/sky-uk/supercell#readme",
+  "devDependencies": {
+    "node-sass": "^4.5.2",
+    "sky-toolkit": "^1.11.0",
+    "stylelint": "^7.9.0",
+    "stylelint-config-sky-uk": "^3.0.0",
+    "stylelint-scss": "^1.4.3",
+    "stylelint-selector-bem-pattern": "^1.0.0"
+  }
+}

@@ -5,12 +5,12 @@ UIs. It can be consumed on its own, or as part of Toolkit._
 
 ## Contents
 
-0. [Installation](#installation)
-0. [Configuration](#configuration)
-0. [Usage](#usage)
-  0. [Responsive](#responsive)
-0. [Options](#options)
-0. [Example](#example)
+1. [Installation](#installation)
+2. [Configuration](#configuration)
+3. [Usage](#usage)
+  1. [Responsive](#responsive)
+4. [Options](#options)
+5. [Example](#example)
 
 ## Installation
 
@@ -36,8 +36,8 @@ sized accordingly, e.g.:
 
 The reason that the layout and the widths are kept in different
 files/suites-of-classes is simple: it allows us to use our width classes (e.g.
-`.u-1/2@small`) on non-layout related bits of UI, for example, making an `img`
-half of the width of its container in a blog post.
+`.u-width-1/2@small`) on non-layout related bits of UI, for example, making an
+`img` half of the width of its container in a blog post.
 
 ## Configuration
 
@@ -48,11 +48,11 @@ There are only two parts of Supercell that might need configuring:
 
 1. **The size of the gutters between items.**  
    To modify the size of the gutters in between layout items, simply predefine
-   the `$global-spacing-unit` variable _just before_ you `@import`
+   the `$supercell-spacing-unit` variable _just before_ you `@import`
    `objects.layout.scss`, like so:
 
    ```SCSS
-   $global-spacing-unit: 20px;
+   $supercell-spacing-unit: 20px;
    @import "objects.layout";
    ```
 2. **The method used to manage rogue whitespace between `inline-block` elements.**  
@@ -85,19 +85,19 @@ like to create. To create a 12 column layout system, simply call the mixin like
 so:
 
 ```SCSS
-@include widths(12);
+@include supercell(12);
 ```
 
 To generate a 12 and a 16 column layout system, call the mixin like so:
 
 ```SCSS
-@include widths(12 16);
+@include supercell(12 16);
 ```
 
 To generate a 3, a 4, and an 8 column layout system, call the mixin like so:
 
 ```SCSS
-@include widths(3 4 8);
+@include supercell(3 4 8);
 ```
 
 Supercell will now generate a full suite of classes that will satisfy every
@@ -124,7 +124,7 @@ To generate a 12 column layout system for use on screens over 1200px wide:
 
 ```SCSS
 @media screen and (min-width: 1200px) {
-  @include widths(12, \@large);
+  @include supercell(12, \@large);
 }
 ```
 
@@ -147,12 +147,12 @@ wide—that look like this:
   .u-width-11/12@large {
     width: 91.666666667% !important;
   }
-    
+
 
   .u-width-12\/12@large {
     width: 100% !important;
   }
-    
+
 
 }
 ```
