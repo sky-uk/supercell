@@ -72,6 +72,12 @@ $_supercell-spacing-unit-large: round($supercell-spacing-unit * 2) !default;
   @error "The value of `$_supercell-spacing-unit-large` must not be changed.";
 }
 
+// We use the `usable-gutter()` function to calculate the padding required on
+// both sides of the `o-layout__item` to equal the desired gutter spacing.
+@function usable-gutter($gutter) {
+  @return round($gutter / 2);
+}
+
 /* Default/mandatory classes.
    =========================================== */
 .o-layout {
@@ -79,7 +85,8 @@ $_supercell-spacing-unit-large: round($supercell-spacing-unit * 2) !default;
   padding: 0;
   list-style: none;
   box-sizing: border-box;
-  margin-left: -$supercell-spacing-unit;
+  margin-left: -#{usable-gutter($supercell-spacing-unit)};
+  margin-right: -#{usable-gutter($supercell-spacing-unit)};
 
   @if ($use-markup-fix == false) {
     font-size: 0;
@@ -92,7 +99,7 @@ $_supercell-spacing-unit-large: round($supercell-spacing-unit * 2) !default;
   vertical-align: top;
   width: 100%;
   box-sizing: border-box;
-  padding-left: $supercell-spacing-unit;
+  padding: 0 #{usable-gutter($supercell-spacing-unit)};
 
   @if ($use-markup-fix == false) {
     font-size: 1rem;
@@ -107,10 +114,10 @@ $_supercell-spacing-unit-large: round($supercell-spacing-unit * 2) !default;
  * Smaller gutters between items.
  */
 .o-layout--narrow {
-  margin-left: -$_supercell-spacing-unit-small;
+  margin-left: -#{usable-gutter($_supercell-spacing-unit-small)};
 
   > .o-layout__item {
-    padding-left: $_supercell-spacing-unit-small;
+    padding: 0 #{usable-gutter($_supercell-spacing-unit-small)};
   }
 
 }
@@ -119,10 +126,10 @@ $_supercell-spacing-unit-large: round($supercell-spacing-unit * 2) !default;
  * Larger gutters between items.
  */
 .o-layout--wide {
-  margin-left: -$_supercell-spacing-unit-large;
+  margin-left: -#{usable-gutter($_supercell-spacing-unit-large)};
 
   > .o-layout__item {
-    padding-left: $_supercell-spacing-unit-large;
+    padding: 0 #{usable-gutter($_supercell-spacing-unit-large)};
   }
 
 }
