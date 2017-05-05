@@ -39,6 +39,13 @@
 
 @mixin supercell($columns, $breakpoint: null) {
 
+  /**
+   * Generate an auto width utility class at each of our breakpoints.
+   */
+  .u-width-auto#{$breakpoint} {
+    width: auto !important;
+  }
+
   // Loop through the number of columns for each denominator of our fractions.
   @each $denominator in $columns {
 
