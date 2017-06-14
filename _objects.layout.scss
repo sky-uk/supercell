@@ -47,6 +47,22 @@
  * This will cause the system to fill up from either the centre or the right
  * hand side. Default behaviour is to fill up the layout system from the left.
  *
+ * By default we add the gutter and offset to the left of `.o-layout` and
+ * `o-layout__item`. There are however situations where it is beneficial to
+ * distribute out gutter evenly across the left and right using the
+ * `.o-layout--balanced` modifier.
+ *
+ *   <div class="o-layout  o-layout--balanced">
+ *     <div class="o-layout__item  u-width-1/2">
+ *     </div>
+ *     <div class="o-layout__item  u-width-1/2">
+ *     </div>
+ *   </div>
+ *
+ * This will add half our gutter spacing to both the left and right side. This
+ * can be useful when adding a divider between two or more `.o-layout__item`
+ * elements etc.
+ *
  * There are plenty more options available to us: explore them below.
  */
 
@@ -72,6 +88,12 @@ $_supercell-spacing-unit-large: round($supercell-spacing-unit * 2) !default;
   @error "The value of `$_supercell-spacing-unit-large` must not be changed.";
 }
 
+// We use the `balanced-gutter()` function to calculate the evenly distributed
+// gutter size on `.o-layout--balanced
+@function balanced-gutter($gutter) {
+  @return round($gutter / 2);
+}
+
 /* Default/mandatory classes.
    =========================================== */
 .o-layout {
@@ -85,6 +107,11 @@ $_supercell-spacing-unit-large: round($supercell-spacing-unit * 2) !default;
     font-size: 0;
   }
 
+  &.o-layout--balanced {
+    margin-left: -#{balanced-gutter($supercell-spacing-unit)};
+    margin-right: -#{balanced-gutter($supercell-spacing-unit)};
+  }
+
 }
 
 .o-layout__item {
@@ -96,6 +123,11 @@ $_supercell-spacing-unit-large: round($supercell-spacing-unit * 2) !default;
 
   @if ($use-markup-fix == false) {
     font-size: 1rem;
+  }
+
+  .o-layout--balanced > & {
+    padding-left: balanced-gutter($supercell-spacing-unit);
+    padding-right: balanced-gutter($supercell-spacing-unit);
   }
 
 }
@@ -113,6 +145,16 @@ $_supercell-spacing-unit-large: round($supercell-spacing-unit * 2) !default;
     padding-left: $_supercell-spacing-unit-small;
   }
 
+  &.o-layout--balanced {
+    margin-left: -#{balanced-gutter($_supercell-spacing-unit-small)};
+    margin-right: -#{balanced-gutter($_supercell-spacing-unit-small)};
+
+    > .o-layout__item {
+      padding-left: balanced-gutter($_supercell-spacing-unit-small);
+      padding-right: balanced-gutter($_supercell-spacing-unit-small);
+    }
+  }
+
 }
 
 /**
@@ -125,6 +167,16 @@ $_supercell-spacing-unit-large: round($supercell-spacing-unit * 2) !default;
     padding-left: $_supercell-spacing-unit-large;
   }
 
+  &.o-layout--balanced {
+    margin-left: -#{balanced-gutter($_supercell-spacing-unit-large)};
+    margin-right: -#{balanced-gutter($_supercell-spacing-unit-large)};
+
+    > .o-layout__item {
+      padding-left: balanced-gutter($_supercell-spacing-unit-large);
+      padding-right: balanced-gutter($_supercell-spacing-unit-large);
+    }
+  }
+
 }
 
 /**
@@ -135,6 +187,16 @@ $_supercell-spacing-unit-large: round($supercell-spacing-unit * 2) !default;
 
   > .o-layout__item {
     padding-left: 0;
+  }
+
+  &.o-layout--balanced {
+    margin-left: 0;
+    margin-right: 0;
+
+    > .o-layout__item {
+      padding-left: 0;
+      padding-right: 0;
+    }
   }
 
 }
