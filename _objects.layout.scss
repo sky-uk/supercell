@@ -59,10 +59,8 @@ $use-markup-fix: false !default;
 // standalone object. If we don’t define anything new this will simply default
 // back to whaever spacing unit the project uses.
 $supercell-spacing-unit: 12px !default;
-
-// Private/framework-only reassignment. Do not alter anything below.
-$_supercell-spacing-unit-small: 8px !default;
-$_supercell-spacing-unit-large: 24px !default;
+$supercell-spacing-unit-small: 8px !default;
+$supercell-spacing-unit-large: 24px !default;
 
 /* Default/mandatory classes.
    =========================================== */
@@ -98,11 +96,11 @@ $_supercell-spacing-unit-large: 24px !default;
  * Smaller gutters between items.
  */
 .o-layout--narrow {
-  margin-left: -$_supercell-spacing-unit-small;
+  margin-left: -$supercell-spacing-unit-small;
 
   > .o-layout__item {
-    padding-left: $_supercell-spacing-unit-small;
-    padding-right: $_supercell-spacing-unit-small;
+    padding-left: $supercell-spacing-unit-small;
+    padding-right: $supercell-spacing-unit-small;
   }
 }
 
@@ -110,11 +108,11 @@ $_supercell-spacing-unit-large: 24px !default;
  * Larger gutters between items.
  */
 .o-layout--wide {
-  margin-left: -$_supercell-spacing-unit-large;
+  margin-left: -$supercell-spacing-unit-large;
 
   > .o-layout__item {
-    padding-left: $_supercell-spacing-unit-large;
-    padding-right: $_supercell-spacing-unit-large;
+    padding-left: $supercell-spacing-unit-large;
+    padding-right: $supercell-spacing-unit-large;
   }
 }
 
@@ -272,13 +270,13 @@ $_supercell-spacing-unit-large: 24px !default;
    */
   &.o-layout--narrow {
     > .o-layout__item {
-      margin-bottom: $_supercell-spacing-unit-small;
+      margin-bottom: $supercell-spacing-unit-small;
     }
   }
 
   &.o-layout--wide {
     > .o-layout__item {
-      margin-bottom: $_supercell-spacing-unit-large;
+      margin-bottom: $supercell-spacing-unit-large;
     }
   }
 }
