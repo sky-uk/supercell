@@ -57,9 +57,8 @@ $use-markup-fix: false !default;
 
 // We can redefine a spacing unit here if we want to use the layout system as a
 // standalone object. If we don’t define anything new this will simply default
-// back to whaever spacing unit the project uses. As the spacing is added
-// uniformly to both sides of an element these values represent half of the total
-// gutter distance.
+// back to whaever spacing unit the project uses. We automatically calculate alt
+// spacing units but these can be manually set by the consumer.
 $supercell-spacing-unit: 24px !default;
 $supercell-spacing-unit-small: round($supercell-spacing-unit / 2) !default;
 $supercell-spacing-unit-large: round($supercell-spacing-unit * 2) !default;
