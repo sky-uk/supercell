@@ -28,7 +28,7 @@
   },
   "homepage": "https://github.com/sky-uk/supercell#readme",
   "devDependencies": {
-    "stylelint": "^11.1.1",
+    "stylelint": "^15.10.1",
     "stylelint-config-sky-uk": "^3.0.0",
     "stylelint-scss": "^3.12.1",
     "stylelint-selector-bem-pattern": "^1.0.0"
